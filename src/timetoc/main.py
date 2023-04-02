@@ -1,3 +1,5 @@
+def main(message: str):
+    return message
 
-def main():
-    return "hello world"
+
+main("Hello world")
