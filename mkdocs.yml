@@ -1,0 +1,21 @@
+site_name: timetoc 
+
+theme:
+  name: "material"
+
+plugins:
+- search:
+- termynal:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [src]
+
+nav:
+  - Index Page: README.md 
+
+repo_url: https://github.com/guilhermeprokisch/timetoc
+
+# to navigate with `/site` content correctly
+use_directory_urls: false
+
