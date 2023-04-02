@@ -26,6 +26,12 @@ taskipy = "^1.10.4"
 [tool.isort]
 profile = "black"
 
+[tool.taskipy.tasks]
+black = { cmd = "black .", help = "Run black" }
+isort = { cmd = "isort .", help = "Run isort" }
+lint = "task black && task isort"
+
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
