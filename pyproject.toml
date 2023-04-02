@@ -48,7 +48,6 @@ clean-cov = { cmd="rm -rf .coverage htmlcov pytest.xml pytest-coverage.txt dist"
 clean = { cmd="task clean-docs && task clean-cov ", help = "Run all clean tasks" }
 
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
