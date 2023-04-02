@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "timetoc"
-version = "0.3.0"
+version = "0.3.1"
 description = "helper to automatic timetac tasks"
 authors = ["Guilherme Prokisch <guilherme.prokisch@gmail.com>"]
 license = "MIT"
