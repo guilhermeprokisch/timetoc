@@ -29,11 +29,11 @@ profile = "black"
 [tool.taskipy.tasks]
 black = { cmd = "black .", help = "Run black" }
 isort = { cmd = "isort .", help = "Run isort" }
-lint = "task black && task isort"
+lint = { cmd="task black && task isort", help="Run all lint tasks"}
 docs = { cmd="mkdocs build", help = "Build docs"}
 ghpages = { cmd='mkdocs gh-deploy -m "docs: update documentation" -v --force', help = "Publish docs to Github Pages"}
 clean-docs = { cmd = "rm -rf site", help = "Remove /site folder (mkdocs build)" }
-clean = "task clean-docs"
+clean = {cmd="task clean-docs", help = "Run all clean tasks"}
 
 
 
