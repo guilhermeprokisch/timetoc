@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/guilhermeprokisch/timetoc/compare/v0.3.1...v0.3.2) (2023-04-02)
+
+
+### Bug Fixes
+
+* force bump version ([c99e40b](https://github.com/guilhermeprokisch/timetoc/commit/c99e40b4e532056d54544d5f42b3503c09d7b85e))
+* release.yml syntax ([d396d98](https://github.com/guilhermeprokisch/timetoc/commit/d396d98412c0d2cd2d36b9f7bc91c3a66fb47d65))
+
 ## [0.3.1](https://github.com/guilhermeprokisch/timetoc/compare/v0.3.0...v0.3.1) (2023-04-02)
 
 
