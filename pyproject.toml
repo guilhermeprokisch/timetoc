@@ -36,7 +36,7 @@ profile = "black"
 [tool.taskipy.tasks]
 black = { cmd = "black .", help = "Run black" }
 isort = { cmd = "isort .", help = "Run isort" }
-pre-commit = { cmd = "pre-commit install", help = "Install pre-commits" }
+pre-commit = { cmd = "pre-commit install && pre-commit install --hook-type commit-msg", help = "Install pre-commits" }
 lint = { cmd="task black && task isort", help="Run all lint tasks"}
 docs = { cmd="mkdocs build", help = "Build docs"}
 ghpages = { cmd='mkdocs gh-deploy -m "docs: update documentation" -v --force', help = "Publish docs to Github Pages" }
