@@ -34,6 +34,7 @@ pytest-cov = "^4.0.0"
 profile = "black"
 
 [tool.taskipy.tasks]
+list = { cmd = "task --list", help = "List all tasks" }
 black = { cmd = "black .", help = "Run black" }
 isort = { cmd = "isort .", help = "Run isort" }
 pre-commit = { cmd = "pre-commit install && pre-commit install --hook-type commit-msg", help = "Install pre-commits" }
@@ -42,8 +43,10 @@ docs = { cmd="mkdocs build", help = "Build docs"}
 ghpages = { cmd='mkdocs gh-deploy -m "docs: update documentation" -v --force', help = "Publish docs to Github Pages" }
 clean-docs = { cmd = "rm -rf site", help = "Remove /site folder (mkdocs build)" }
 unit-test = { cmd="pytest --doctest-modules", help = "Run all unit tests" }
+open-cover-report = { cmd="open htmlcov/index.html", help = "Open cover report" }
 unit-test-cov = { cmd="pytest --doctest-modules --cov=src --cov-report term-missing --cov-report=html", help = "Run all unit tests with cover report" }
-unit-tests-cov-fail= { cmd="pytest --doctest-modules --cov=src --cov-report term-missing --cov-report=html --cov-fail-under=80 --junitxml=pytest.xml | tee pytest-coverage.txt", help = "Run all unit tests with cover report and " }
+unit-tests-cov-fail= { cmd="pytest --doctest-modules --cov=src --cov-report term-missing --cov-report=html --cov-fail-under=80 --junitxml=pytest.xml | tee pytest-coverage.txt", help = "Run all unit tests with cover report and threshold test  " }
+cover = { cmd="task unit-test-cov | task open-cover-report", help="Run and open cover test report"}
 test = { cmd="task unit-test", help="Run all tests"}
 test-cov = { cmd="task unit-test-cov", help="Run all tests w/ cover"}
 clean-cov = { cmd="rm -rf .coverage htmlcov pytest.xml pytest-coverage.txt dist", help="Run cover reports"}

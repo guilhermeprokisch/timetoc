@@ -1,0 +1,68 @@
+---
+name: Testing
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_call:
+
+jobs:
+  Testing:
+    runs-on: ubuntu-latest
+    steps:
+      # check-out repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      # install poetry
+      - name: Install poetry
+        run: pipx install poetry==1.3.2
+      # set-up python with cache
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'poetry'
+      # install requirements (including dev dependencies)
+      - name: Install requirements
+        run: poetry install --with test
+      # run unit tests
+      - name: Run unit-tests
+        run: |
+          set -o pipefail
+          poetry run task unit-tests-cov-fail
+      # add pytest coverage report to PR
+      - name: Pytest coverage comment
+        if: ${{ success()}}
+        id: coverageComment
+        uses: MishaKav/pytest-coverage-comment@main
+        with:
+          title: Coverage Report
+          pytest-coverage-path: ./pytest-coverage.txt
+          junitxml-path: ./pytest.xml
+      # add content to GitHub summary
+      - name: Pytest coverage GitHub summary
+        if: ${{ success() }}
+        run: |
+          set -o pipefail
+          echo '# Coverage report' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          cat pytest-coverage.txt >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo '\n\n\n'
+          echo '${{ steps.coverageComment.outputs.coverageHtml }}' >> $GITHUB_STEP_SUMMARY
+          echo '${{ steps.coverageComment.outputs.coverage }}' >> $GITHUB_STEP_SUMMARY
+
+      - name: Create Covarege Badge
+        uses: schneegans/dynamic-badges-action@v1.6.0
+        if: github.ref == 'refs/heads/main'
+        with:
+          auth: ${{ secrets.PYTEST_COVERAGE_COMMENT }}
+          color: ${{ steps.coverageComment.outputs.color }}
+          filename: pytest-coverage-comment_timetoc.json
+          gistID: 83546fffaa98f4533efff28efa3b1746
+          label: Coverage 
+          message: ${{ steps.coverageComment.outputs.coverage }}
+          namedLogo: pytest
