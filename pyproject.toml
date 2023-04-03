@@ -34,6 +34,7 @@ pytest-cov = "^4.0.0"
 profile = "black"
 
 [tool.taskipy.tasks]
+list = { cmd = "task --list", help = "List all tasks" }
 black = { cmd = "black .", help = "Run black" }
 isort = { cmd = "isort .", help = "Run isort" }
 pre-commit = { cmd = "pre-commit install && pre-commit install --hook-type commit-msg", help = "Install pre-commits" }
