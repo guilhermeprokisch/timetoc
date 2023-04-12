@@ -15,11 +15,11 @@ pipx install git+https://github.com/guilhermeprokisch/timetoc.git
 Add TIME_TRACK_BASE_URL as enviroment variable for the crawler works
 ```console
 export TIME_TRACK_BASE_URL="https:\\some-timetac-login-page.com
-`
+```
 
 ## Contributing
 
-`If you would like to contribute to the Timetoc Work Tracker tool, please fork the repository and submit a pull request. Contributions are always welcome!
+If you would like to contribute to the Timetoc Work Tracker tool, please fork the repository and submit a pull request. Contributions are always welcome!
 
 ## License
 
