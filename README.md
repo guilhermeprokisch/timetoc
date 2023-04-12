@@ -31,11 +31,12 @@ The following options are available:
   --break-start or -bs: The start time of the break in the work day in the format hh:mm.
   --break-finish or -bf: The finish time of the break in the work day in the format hh:mm.
   --home-office or -h: Whether the day is a home office day.
+  --help: Show all avalible options
 ```
 
-You can pass in either the --day option with a specific date or the --day-str option with a natural language date. If neither is specified, the script will prompt you for a default value of "yesterday".
+You can pass in either the `--day` option with a specific date or the `--day-str` option with a natural language date. If neither is specified, the script will prompt you for a default value of "yesterday".
 
-You can provide the start and finish times of the work day using the --start and --finish options respectively. If you need to take a break during the work day, you can specify the start and finish times of the break using the --break-start and --break-finish options.
+You can provide the start and finish times of the work day using the `--start` and `--finish` options respectively. If you need to take a break during the work day, you can specify the start and finish times of the break using the --break-start and --break-finish options.
 
 The `--home-office` option can be used to indicate whether the work day was done from home.
 
