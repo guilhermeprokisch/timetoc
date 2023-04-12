@@ -75,4 +75,4 @@ If you would like to contribute to the Timetoc, please fork the repository and s
 
 ## License
 
-The Timetoc Work Tracker tool is licensed under the MIT License. See [LICENSE](https://chat.openai.com/chat/LICENSE) for more information.
+The Timetoc Work Tracker tool is licensed under the MIT License. See [LICENSE](https://github.com/guilhermeprokisch/timetoc/blob/main/LICENCE) for more information.
