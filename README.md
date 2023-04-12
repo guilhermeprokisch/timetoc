@@ -15,7 +15,7 @@ $ pipx install git+https://github.com/guilhermeprokisch/timetoc.git
 Add `TIME_TRACK_BASE_URL` as enviroment variable for the crawler works
 
 ```console
-$ export TIME_TRACK_BASE_URL="https:\\some-timetac-login-page.com
+$ export TIME_TRACK_BASE_URL="https://some-timetac-login-page.com
 ```
 
 # Usage
