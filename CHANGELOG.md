@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.0](https://github.com/guilhermeprokisch/timetoc/compare/v0.3.2...v0.4.0) (2023-04-12)
+
+
+### Features
+
+* v1.0.0-beta ([0413ebe](https://github.com/guilhermeprokisch/timetoc/commit/0413ebe4d9fe818a6b79ff5edf349359428528a7))
+
+
+### Documentation
+
+* readme.md ([197f196](https://github.com/guilhermeprokisch/timetoc/commit/197f1963674fc28477d286731f2690316724ea6b))
+
 ## [0.3.2](https://github.com/guilhermeprokisch/timetoc/compare/v0.3.1...v0.3.2) (2023-04-02)
 
 
