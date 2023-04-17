@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.4.0](https://github.com/guilhermeprokisch/timetoc/compare/v0.3.2...v0.4.0) (2023-04-17)
+
+
+### Features
+
+* v0.4.0-beta ([ddc6f79](https://github.com/guilhermeprokisch/timetoc/commit/ddc6f794d458f2dcd69073c95b00ee87ff60fa05))
+
+
+### Documentation
+
+* readme.md ([d262650](https://github.com/guilhermeprokisch/timetoc/commit/d262650e36e3986754a20f640e4a79e758bb6975))
+* updated readme ([6b89105](https://github.com/guilhermeprokisch/timetoc/commit/6b89105aa6c3e6acc4a2d937f8cfa37cea77c568))
+* updated readme ([b861bf5](https://github.com/guilhermeprokisch/timetoc/commit/b861bf5459e269481f1e4f21f333532182d67744))
+* updated readme ([616d9f1](https://github.com/guilhermeprokisch/timetoc/commit/616d9f1ebe035dc7a9ee5cbbc4ca3c3279ca2865))
+* updated Readme.md ([83a1b87](https://github.com/guilhermeprokisch/timetoc/commit/83a1b876422ddf54c3ed11e8e26fb8a3461842d5))
+* updated Readme.md ([02e9c1c](https://github.com/guilhermeprokisch/timetoc/commit/02e9c1cd1bc9933b1013b9743e68858775f33aef))
+
 ## [0.4.2](https://github.com/guilhermeprokisch/timetoc/compare/v0.4.1...v0.4.2) (2023-04-12)
 
 
